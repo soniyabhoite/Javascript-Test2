@@ -9,10 +9,22 @@
             var email=document.getElementById("txtemail").value
             var password=document.getElementById("txtpassword").value
             console.log(email,password)
-            var user=[]
             
-            localStorage.setItem("email",email)
-            localStorage.setItem("password",password)
+            if(!email || !password)
+            {
+                alert("all fields are required..")
+            }
+            else{
+                var userdata={"email":email,"password":password}
+                
+                localStorage.setItem("email",email)
+                 localStorage.setItem("password",password)
+            }
+            
+       
+            
+                    
+            
             
         
         }
@@ -21,7 +33,7 @@
 <body>
     <div>
         <h1>Register </h1>
-        <form action="./Login.html" onsubmit="register()" method="post">
+        <form action="./Login.html" onsubmit="register()" method="">
             <label for="txtemail">Email :</label>
             <input type="email" name="txtemail" id="txtemail">
             <br>
