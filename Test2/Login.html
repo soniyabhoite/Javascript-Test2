@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login(){
+            var uemail=document.getElementById("txtemail").value
+            var upassword=document.getElementById("txtpassword").value
+            var email=localStorage.getItem("email")
+            var password=localStorage.getItem("password")
+            if(uemail===email && upassword===password)
+            {
+                alert("Login Successful....!")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Login </h1>
+        <form action="" onsubmit="login()">
+            <label for="txtemail">Email :</label>
+            <input type="email" name="txtemail" id="txtemail">
+            <br>
+            <br>
+            <label for="txtpassword">Password</label>
+            <input type="password" name="txtpassword" id="txtpassword">
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

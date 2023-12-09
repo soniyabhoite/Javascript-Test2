@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function register(){
+            var email=document.getElementById("txtemail").value
+            var password=document.getElementById("txtpassword").value
+            console.log(email,password)
+            var user=[]
+            
+            localStorage.setItem("email",email)
+            localStorage.setItem("password",password)
+            
+        
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Register </h1>
+        <form action="./Login.html" onsubmit="register()" method="post">
+            <label for="txtemail">Email :</label>
+            <input type="email" name="txtemail" id="txtemail">
+            <br>
+            <br>
+            <label for="txtpassword">Password</label>
+            <input type="password" name="txtpassword" id="txtpassword">
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
