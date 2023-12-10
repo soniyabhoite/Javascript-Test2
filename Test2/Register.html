@@ -16,10 +16,12 @@
             }
             else{
                 var userdata={"email":email,"password":password}
-               
+               var user=JSON.parse(localStorage.getItem('users'))|| []
+                user.push(userdata)
+                console.log(user)
 
-                localStorage.setItem("email",email)
-                 localStorage.setItem("password",password)
+                localStorage.setItem("users",JSON.stringify(user))
+                 
             }
             
        
